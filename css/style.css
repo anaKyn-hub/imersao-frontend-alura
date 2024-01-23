@@ -1,0 +1,75 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar_navigation, .library {
+    background-color: #121212;
+    border-radius: 8px;
+}
+
+.sidebar_navigation .logo{
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.sidebar nav ul, .library  {
+    margin-top: 12px;
+    padding: 0 20px 10px;
+}
+
+.sidebar ul li {
+    padding: 10px 0px;
+}
+
+.sidebar nav ul li a, #library-menu div {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.sidebar nav ul li a i, .library i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.library {
+    height: 100vh;
+}
+
+#library-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+}
+
+#plus {
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+.box {
+    background-color: #242424;
+    color: white;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "DM Sans", sans-serif;
+}
