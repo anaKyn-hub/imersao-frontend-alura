@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="sidebar">
-            <nav class="sidebar_navigation">
+            <nav class="sidebar-navigation">
                 <div class="logo">
                     <a href="#">
                         <img src="/assets/icons/logo-spotify.png" alt="Logo do Spotify"/>
@@ -27,13 +27,13 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <i class="fa-solid fa-house"></i>
+                                <span class="fa-solid fa-house icon"></span>
                                 <span>Início</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span class="fa-solid fa-magnifying-glass icon"></span>
                                 <span>Buscar</span>
                             </a>
                         </li>
@@ -42,15 +42,43 @@
             </nav>
 
             <div class="library">
-                <div id="library-menu">
-                    <div>
-                        <i class="fa-solid fa-book"></i>
+                <div class="library-menu">
+                    <a href="#">
+                        <span class="fa-solid fa-book icon"></span>
                         <span>Sua Biblioteca</span>
-                    </div>
-                    <i id="plus" class="fa-regular fa-plus"></i>
+                    </a>
+                    <a href="#"><span id="plus" class="fa-regular fa-plus"></span></a>
                 </div>
-                <div class="box">
-                    <span>Crie sua primeira playlist</span>
+
+                <section class="library-playlist">
+                    <div class="library-playlist-content">
+                        <span class="text title">Crie sua primeira playlist</span>
+                        <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                        <button class="library-playlist-button">
+                            <span>Criar Playlist</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="library-podcast">
+                    <div class="library-podcast-content">
+                        <span class="text title">Que tal seguir um podcast novo?</span>
+                        <span class="text subtitle">Avisaremos você sobre novos episódios.</span>
+                        <button class="library-podcast-button">
+                            <span>Explore podcasts</span>
+                        </button>
+                    </div>
+                </section>
+
+                <div class="cookies">
+                    <a href="#">Cookies</a>
+                </div>
+
+                <div class="languages">
+                    <button class="languages-button">
+                        <span class="fa-solid fa-globe"></span>
+                        <span>Português do Brasil</span>
+                    </button>
                 </div>
             </div>
         </div>  
