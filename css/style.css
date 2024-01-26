@@ -1,14 +1,17 @@
+body {
+    background-color: #000;
+    font-family: var(--font-dm-sans);
+}
+
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    padding: 12px;
+    padding: 8px;
     width: 300px;
-    background-color: black;
 
-    display: flex;
-    flex-direction: column;
+    /*background-color: green;*/
 }
 
 .sidebar-navigation, .library {
@@ -17,7 +20,6 @@
 }
 
 .sidebar-navigation .logo{
-    display: flex;
     padding: 16px 0 0 16px;
 }
 
@@ -39,7 +41,6 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 15px;
-    font-family: "DM Sans", sans-serif;
 }
 
 .menu ul li a {
@@ -48,16 +49,12 @@
     gap: 0 4px;
 }
 
-.icon {
-    font-size: 20px;
-    margin-right: 10px;
-}
-
 .library {
-    margin-top: 10px;
-    height: 100vh;
+    margin-top: 8px;
+    
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .library-menu {
@@ -78,50 +75,44 @@
     font-size: 16px;
 }
 
+.library-content {
+    max-height: 85px;
+    overflow-y: scroll;
+}
+
 .library-playlist, .library-podcast {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
+
     background-color: #242424;
     color: #b3b3b3;
     font-weight: 600;
     font-size: 15px;
+
     margin: 8px;
     padding: 16px 20px;
     border-radius: 6px;
-    font-family: "DM Sans", sans-serif;
 }
 
-.library-playlist .library-playlist-content, .library-podcast-content {
+.library-playlist-content, .library-podcast-content {
     display: flex;
     flex-direction: column;
 }
 
-.library-playlist-content .text, .library-podcast-content .text {
-    padding-bottom: 14px;
-    color: white;
-}
-
-.library-playlist-content .title, .library-podcast-content .title {
-    font-weight: 700;
-}
-
-.library-playlist-content .subtitle, .library-podcast-content .subtitle {
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.library-playlist-content .library-playlist-button, .library-podcast-content .library-podcast-button {
+.library-playlist-button, .library-podcast-button {
     display: flex;
     justify-content: center;
+
     background-color: white;
     border: 0;
     border-radius: 20px;
+
     color: #000;
     font-size: 14px;
     font-weight: 600;
-    font-family: "DM Sans", sans-serif;
+
     padding: 12px 14px;
     margin-top: 10px;
     width: 133px;
@@ -132,13 +123,18 @@
 }
 
 .library .cookies {
-    margin: 10px;
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .library .cookies a {
     color: #b3b3b3;
     font-weight: 500;
+    font-size: 12px;
     text-decoration: none;
+    padding: 10px 15px 8px 0;
 }
 
 .library .cookies a:hover {
@@ -149,11 +145,67 @@
     background-color: transparent;
     border: 1px solid #878787;
     border-radius: 20px;
+
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    font-size: 14px;
+
     align-items: center;
-    width: 170px;
-    margin: 8px;
+    width: 180px;
+    margin: 20px 0 30px 20px;
     padding: 8px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.text {
+    padding-bottom: 14px;
+    color: white;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+    background: linear-gradient(90deg, rgba(209,0,194,1)0%, rgba(157,4,212,1) 39%, rgba(69,209,217,1) 100%);
+    
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    padding: 15px 30px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+}
+
+.premium-button {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 0;
+    border-radius: 25px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 18px;
+    width: 183px;
 }
