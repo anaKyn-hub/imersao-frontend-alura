@@ -3,6 +3,8 @@ body {
     font-family: var(--font-dm-sans);
 }
 
+/*Sidebar*/
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -175,6 +177,8 @@ body {
     font-weight: 500;
     font-size: 14px;
 }
+
+/*Footer Message*/
 
 footer {
     display: flex;

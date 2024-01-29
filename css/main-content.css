@@ -6,6 +6,7 @@
 - Estilizar o scroll da sidebar
 - Ver sobre o height da library e do main-content
 - Adicionar uns hovers nos botões
+- Adicionar mais APIs JSON
 */
 
 .main-content {
@@ -84,7 +85,7 @@
 }
 
 .header-login .subscribe {
-    color: #a7a7a7;
+    color: #a7a7a7; /*variavel nome --text-sub*/
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
@@ -94,8 +95,66 @@
 .header-login .login {
     width: 100px;
     height: 48px;
-    color: #000;
+    color: #000; /*variavel nome --text-base-dark*/
     font-size: 16px;
     font-weight: 700;
     border-radius: 40px;
+}
+
+/*Hover*/
+
+.header-search:hover {
+    border: 1px solid #fff;
+}
+
+.header-login .subscribe:hover {
+    transform: scale(1.04);
+    color: var(--text-base-light); /*criar essa variavel*/
+}
+
+.header-login .login:hover {
+    transform: scale(1.04);
+}
+
+/*Cards*/
+
+.cards-container {
+    height: 68vh;
+    padding-top: 16px;
+    margin: 8px 0 8px 0;
+    border-radius: 10px;
+    background-color: #121212;
+}
+
+.cards-greetings {
+    margin: 24px;
+}
+
+.cards-greetings #greetings {
+    color: var(--text-base-light); /*criar essa variavel*/
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.cards-greetings .session {
+    color: var(--text-base-light); /*criar*/
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.offer-scroll-container {
+    max-height: 43vh;
+    margin: 24px;
+    overflow-y: auto;
+}
+
+/*Scroll*/
+
+.offer-scroll-container::-webkit-scrollbar {
+    width: 3px;
+}
+
+.offer-scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
