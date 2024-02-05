@@ -2,17 +2,15 @@
 
 /*
 - Arrumar o input pro texto ficar igual do site
-- Deixar a barra de pesquisa perto das setas igual do site
-- Estilizar o scroll da sidebar
-- Ver sobre o height da library e do main-content
+- Deixar o scroll em cima do conteúdo e com animação
 - Adicionar uns hovers nos botões
 - Adicionar mais APIs JSON
 */
 
 .main-content {
     max-width: 80vw;
-    height: 100vh;
-    padding: 8px;
+    /*height: 100vh;*/
+    padding: 8px 8px 8px 0;
     margin-left: 316px;
 
     /*background-color: peru;*/
@@ -34,8 +32,12 @@
     align-items: center;
 }
 
-.header-navigation .navigation .arrow-left {
+.header-navigation .navigation {
     margin-right: 1.25rem;
+}
+
+.arrow-left {
+    margin-right: 8px;
 }
 
 .arrow-left, .arrow-right {
@@ -61,7 +63,7 @@
     align-items: center;
     width: 364px;
     height: 48px;
-    margin-left: 8px;
+    margin-left: 16px;
     background-color: #242424;
     border-radius: 500px;
     border: 1px solid transparent;
@@ -146,15 +148,26 @@
 .offer-scroll-container {
     max-height: 43vh;
     margin: 24px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 /*Scroll*/
 
 .offer-scroll-container::-webkit-scrollbar {
-    width: 3px;
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
 }
 
 .offer-scroll-container::-webkit-scrollbar-thumb {
+    visibility: hidden;
+}
+
+.cards-container:hover .offer-scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(167, 167, 167, 0.3);
+    visibility: visible;
+}
+
+.offer-scroll-container::-webkit-scrollbar-corner {
     background-color: transparent;
 }

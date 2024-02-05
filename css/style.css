@@ -53,6 +53,7 @@ body {
 
 .library {
     margin-top: 8px;
+    padding-bottom: 8px;
     
     display: flex;
     flex-direction: column;
@@ -80,6 +81,29 @@ body {
 .library-content {
     max-height: 85px;
     overflow-y: scroll;
+}
+
+.library-content::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+}
+
+.library-content::-webkit-scrollbar-thumb {
+    background-color: rgba(167, 167, 167, 0.0);
+    /*visibility: hidden;*/
+}
+
+.library:hover .library-content::-webkit-scrollbar-thumb {
+    background-color: rgba(167, 167, 167, 0.3);
+    animation: show-scroll 5s;
+    /*visibility: visible;*/
+}
+
+/*Animation*/
+@keyframes show-scroll {
+    from {background-color: rgba(167, 167, 167, 0.0);}
+    to {background-color: rgba(167, 167, 167, 0.3);}
 }
 
 .library-playlist, .library-podcast {
